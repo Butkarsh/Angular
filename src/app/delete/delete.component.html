@@ -1,0 +1,17 @@
+<p class="well well-info">
+  dispaly/delete components works!
+</p>
+<table  class="table table-border p-3" align="center" width='70%' *ngIf='emps.length > 0'>
+  <tbody>
+  <tr *ngFor='let b of emps'>
+    <td> {{b.id}} </td>
+    <td> {{b.firstName }} </td>
+    <td> {{b.lastName}} </td>
+    <td> {{b.telephone }} </td>
+	<td> {{b.city}} </td>
+    <td> {{b.address}} </td>
+    <td> <button class="btn btn-sm" routerLink="/update/{{b.id}}">update</button> </td>
+    <td> <button class="btn btn-sm" (click)="deleteUser(this.b)">Delete</button> </td>
+	 </tr>
+  </tbody>
+</table>

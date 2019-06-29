@@ -1,0 +1,15 @@
+
+<div class="row container" style="margin-top:2rem;">
+<div class="col-md-2">
+<div class="list-group">
+  <a [routerLink]="['./product-list']" class="list-group-item list-group-item-action">
+    product-list
+  </a>
+  <a [routerLink]="['./product-add']" class="list-group-item list-group-item-action">product-add</a>
+  <a [routerLink]="['./product-cart']" class="list-group-item list-group-item-action">product-cart <span class="badge badge-secondary">{{ prodsrv.CartCount }}</span></a>  
+  <a [routerLink]="['./product-fav']" class="list-group-item list-group-item-action">product-Fav<span class="badge badge-secondary">{{ prodsrv.FavProdCount }}</span></a>
+</div>
+</div>
+<div class="col-md-10" style="border:1px solid black; padding:1rem;">
+<router-outlet > </router-outlet>
+</div>

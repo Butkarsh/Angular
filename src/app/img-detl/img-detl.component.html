@@ -1,0 +1,23 @@
+
+<div class="row container-fluid" style="margin:2rem;border-top:2px solid black; border-bottom:2px solid black;padding:2rem;">
+<div class="col-md-4 text-center">
+<!-- <div [ngStyle]="{'background-image':'url('+ +')'}" class=" imgstl info-success">
+</div>
+ -->
+ <img src="{{img.url}}" height="300" width="200" style="border:1px solid black;"> 
+ </div>
+ <div class="col-md-6">
+	
+	<div class="alert alert-info">{{img.caption}}</div>
+
+	<table class="table table-bordered" width="50%">
+	<tr >
+	<td>{{img.caption }}</td>
+	<td>{{img.id }}</td>
+	<td>{{img.url}}</td>
+	<td><button type="button" class="btn btn-primary-outline pull-right" (click)="btnClick();"><i class="fa fa-plus"></i> bo back</button> </td>
+	</tr>
+	</table>
+</div>
+</div>
+   

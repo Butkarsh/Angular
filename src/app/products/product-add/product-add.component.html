@@ -1,0 +1,57 @@
+<form [formGroup]="prodForm" (ngSubmit)="addProducts()">
+  
+  <div class="form-group">
+    <label class="center-block">Product Name:
+      <input class="form-control" formControlName="productName">
+    </label>
+  </div>
+  
+  <div class="form-group">
+    <label class="center-block">Category:
+      <input class="form-control" formControlName="productCategory" [(ngModel)]="productCategory" >
+    </label>
+	<span *ngIf="prodForm.controls.productCategory.errors?.required && prodForm.controls.productCategory.touched" class="error">
+		* First Nmae Required
+    </span>	
+  </div>
+ 
+  
+   <div class="form-group">
+    <label class="center-block">Description:
+      <textarea class="form-control" formControlName="productDescription"></textarea>
+	  
+    </label>
+  </div>
+  
+  <div class="form-group">
+    <label class="center-block">Price:
+      <input class="form-control" formControlName="productPrice">
+    </label>
+  </div>
+  
+  <div class="form-group">
+    <label class="center-block">Quantity:
+      <input class="form-control" formControlName="productQuatity">
+    </label>
+  </div>
+  
+  <div class="form-group">
+    <label class="center-block">Product Seller:
+      <input class="form-control" formControlName="productSeller">
+    </label>
+  </div>
+  
+  <div class="form-group">
+    <label class="center-block">Product Image:
+      <select class="form-control" formControlName="productImageUrl">
+	  <option *ngFor="let img of imgs">{{img}}</option>
+	  </select>
+    </label>
+  </div>
+  
+  <div class="form-group">
+      <button [disabled]="!prodForm.valid" class="btn btn-primary">Add Product</button>
+  </div>
+
+ </form>
+

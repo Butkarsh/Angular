@@ -1,0 +1,21 @@
+yolohelth
+ demo data:
+{
+    "Status": "Success",
+    "body": {
+        "username": "Interview User",
+        "weight": 0,
+        "dob": null,
+        "gender": "m",
+        "userprofilepic": "https://healthatm.in/djangostatic/uploadedfiles/userprofilepics/default_user.png",
+        "userid": 30254,
+        "height": 0,
+        "phone": "917777777777",
+        "email": "arpit.mishra@yolohealth.in",
+        "externalid": "",
+        "kioskid": 100,
+        "iskioskadmin": false,
+        "externalsystem": "",
+        "age": 19
+    }
+}

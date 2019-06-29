@@ -1,0 +1,13 @@
+<div class="row container" style="padding:2rem;">
+<button class="btn btn-success" [class.active]="filterBy == 'all'" (click)="filterBy='all'">All</button>
+<button class="btn btn-success" [class.active]="filterBy == 'one'" (click)="filterBy='one'">one</button>
+<button class="btn btn-success" [class.active]="filterBy == 'two'" (click)="filterBy='two'">two</button>
+<button class="btn btn-success" [class.active]="filterBy == 'three'" (click)="filterBy='three'">three</button>
+<ul id="thumbnillist">
+	<li *ngFor="let imgs of (dispImg | imgpip:filterBy )">
+	<a [routerLink]="['/imgs', imgs.id ]">
+		<img src="{{imgs.url}}" class="ms" width="200" height="200" border="2">
+		</a>
+	</li>
+</ul>
+</div>

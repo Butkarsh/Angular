@@ -1,0 +1,26 @@
+        <label for="brand_select">Filter By Brands:</label>
+        <select class="form-control" name="" id="brand_select" [(ngModel)]="selectedBrand">
+          <!-- <option *ngFor="let brand of brands" [ngValue]="brand">{{brand}}</option> -->
+        </select>
+<hr>
+
+<div class="row" >
+<div class="col-md-4" *ngFor="let Product of product">
+<div class="card" >
+  <img class="card-img-top" src="{{Product.productImageUrl}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ Product.productCategory }}</h5>
+	<b>{{ Product.productName }}</b><br>
+	<a [routerLink]="['/product/product-detail',Product.id]" >Quick View</a>
+	<!--<p class="card-text">{{ Product.productDescription }}</p> -->
+  </div>
+    <div class="card-body">
+	&#8377;&nbsp;{{ Product.productPrice }}
+    <span (click)="addToCart(Product)" class="btn btn-primary"><i class="fas fa-cart-plus"></i></span>
+    <a (click)="addToFavourite(Product)" class="btn btn-primary"><i class="fas fa-heart"></i></a>
+	<a (click)="removeProduct(Product)" class="btn btn-primary"><i class="fas fa-trash"></i></a>
+  </div>
+</div>
+</div>
+</div>
+<!-- <router-outlet></router-outlet> -->

@@ -1,0 +1,56 @@
+<p class="well well-info">
+  update works!
+</p>
+ <div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-6">
+<form [formGroup]="revForm" (ngSubmit)="updateUser()">
+  
+  <div class="form-group">
+    <label class="center-block">ID:
+      <input class="form-control"  formControlName="id"
+									[(ngModel)]="emps.id"
+									(change)="getUser(emps.id)">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label class="center-block">First Name:
+      <input class="form-control" formControlName="firstName" 
+									[(ngModel)]="emps.firstName">
+    </label>
+	<span *ngIf="revForm.controls.firstName.errors?.required && revForm.controls.firstName.touched" class="error">
+		* First Nmae Required
+    </span>	
+  </div>
+
+  <div class="form-group">
+    <label class="center-block">Last Name:
+      <input class="form-control" formControlName="lastName"
+									[(ngModel)]="emps.lastName">
+    </label>
+  </div>
+  
+   <div class="form-group">
+    <label class="center-block">city:
+      <input class="form-control" formControlName="city" [(ngModel)]="emps.city">
+    </label>
+  </div>
+  
+   <div class="form-group">
+    <label class="center-block">Mobile No.:
+      <input class="form-control" formControlName="telephone" [(ngModel)]="emps.telephone">
+    </label>
+  </div>
+  
+  <div class="form-group">
+    <label class="center-block">Address:
+      <input class="form-control" formControlName="address" [(ngModel)]="emps.address">
+    </label>
+  </div>
+  <div class="form-group">
+      <button [disabled]="!revForm.valid" class="btn btn-primary">Save</button>
+  </div>
+
+ </form>
+</div>

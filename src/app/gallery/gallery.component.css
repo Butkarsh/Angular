@@ -1,0 +1,19 @@
+.row{
+	
+	margin-left:0px;
+	margin-right:0px;
+	
+}
+
+ul{	padding:0;
+	width:1200px; 
+	margin:20px auto;
+}
+
+li{display:inline;}
+
+ms{
+	margin:6px;
+	border:10px solid green;
+	box-shadow: 1px 1px 10px 1px;
+}
